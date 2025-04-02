@@ -1,4 +1,6 @@
-namespace StructuralVisualizerCS;
+using System;
+
+namespace StructuralVisualizer;
 
 public class Point(double x = 0, double y = 0)
 {

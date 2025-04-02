@@ -1,4 +1,4 @@
-namespace StructuralVisualizerCS;
+namespace StructuralVisualizer;
 
 public class Segment(Point start, Point end)
 {
@@ -13,8 +13,13 @@ public class Segment(Point start, Point end)
 
     public double Length => Start.DistanceTo(Start,End);
 
-    public Point PointAt(double t) => Start.Displaced(DirectionVector, t);
-    public Point Middle => PointAt(0.5);
+    public Point PointAt(double t)
+    {
+        new TParam().EnsureValid(t);
+        return Start.Displaced(DirectionVector, t);
+    }
+
+    public Point Middle => PointAt(new TParam().Middle);
     
 
 }

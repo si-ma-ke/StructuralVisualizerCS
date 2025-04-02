@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using StructuralVisualizerCS;
+using System;
+using StructuralVisualizer;
 
 Point p = new Point(2.0, 2.0);
 Point q = new Point(1.5, 1.5);
@@ -12,3 +13,7 @@ Console.WriteLine(v.IsNormal);
 Console.WriteLine(v.Norm);
 Console.WriteLine(new Vector().Dot(v,u));
 Console.WriteLine(v);
+
+new TParam().EnsureValid(1);
+new TParam().EnsureValid(10);
+

@@ -1,4 +1,10 @@
-namespace StructuralVisualizerCS;
+using System;
+
+using System.Runtime.CompilerServices;
+using System.Text;
+using System.Collections.Generic;
+
+namespace StructuralVisualizer;
 
 public class Vector(double u = 0, double v = 0)
 {
@@ -17,8 +23,12 @@ public class Vector(double u = 0, double v = 0)
 
     public override int GetHashCode()
     {
-        return HashCode.Combine(U, V);
+        unchecked
+        {
+            return (U.GetHashCode() * 397) ^ V.GetHashCode();
+        }
     }
+
 
     public double U { get; private set; } = u;
     public double V { get; private set; } = v;
