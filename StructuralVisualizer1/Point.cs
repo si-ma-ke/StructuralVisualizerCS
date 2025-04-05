@@ -24,6 +24,24 @@ public class Point(double x = 0, double y = 0)
     
     
     
+    protected bool Equals(Point other)
+    {
+        return X.Equals(other.X) && Y.Equals(other.Y);
+    }
+
+    public override bool Equals(object? obj)
+    {
+        if (obj is null) return false;
+        if (ReferenceEquals(this, obj)) return true;
+        if (obj.GetType() != GetType()) return false;
+        return Equals((Point)obj);
+    }
+
+    public override int GetHashCode()
+    {
+        return HashCode.Combine(X, Y);
+    }
+
     public static Point operator +(Point p, Point q) => new Point(p.X + q.X, p.Y + q.Y);
     public static Vector operator -(Point p, Point q) => new Vector(p.X - q.X, p.Y - q.Y);
     
