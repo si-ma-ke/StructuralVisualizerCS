@@ -1,10 +1,4 @@
-using System;
-
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Collections.Generic;
-
-namespace StructuralVisualizer;
+namespace StructuralVisualizer1;
 
 public class Vector(double u = 0, double v = 0)
 {

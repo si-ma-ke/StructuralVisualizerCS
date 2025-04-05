@@ -1,4 +1,4 @@
-namespace StructuralVisualizer;
+namespace StructuralVisualizer1;
 
 public class VectorFactory : Vectors
 {

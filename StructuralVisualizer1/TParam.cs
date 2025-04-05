@@ -1,4 +1,4 @@
-namespace StructuralVisualizer;
+namespace StructuralVisualizer1;
 
 public class TParam
 {
@@ -14,7 +14,7 @@ public class TParam
 
    }
 
-   private bool IsValid(double t) => (t < Min || t > Max) ? false : true;
+   public bool IsValid(double t) => (t < Min || t > Max) ? false : true;
    
    
    

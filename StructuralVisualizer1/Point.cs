@@ -1,6 +1,4 @@
-using System;
-
-namespace StructuralVisualizer;
+namespace StructuralVisualizer1;
 
 public class Point(double x = 0, double y = 0)
 {
@@ -44,5 +42,7 @@ public class Point(double x = 0, double y = 0)
 
     public static Point operator +(Point p, Point q) => new Point(p.X + q.X, p.Y + q.Y);
     public static Vector operator -(Point p, Point q) => new Vector(p.X - q.X, p.Y - q.Y);
+    
+    public override string ToString() => $"({X}, {Y})";
     
 }

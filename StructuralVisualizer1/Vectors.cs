@@ -1,4 +1,4 @@
-namespace StructuralVisualizer;
+namespace StructuralVisualizer1;
 
 public abstract class Vectors
 {

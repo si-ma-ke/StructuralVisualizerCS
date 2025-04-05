@@ -1,6 +1,4 @@
-using System;
-
-namespace StructuralVisualizer;
+namespace StructuralVisualizer1;
 
 public class Nums
 {
